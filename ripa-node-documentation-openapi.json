@@ -1,0 +1,2260 @@
+{
+    "openapi": "3.0.0",
+    "info": {
+        "version": "",
+        "title": "RIPA Node Documentation",
+        "description": "This is a documentation for **[ripa-node](https:\/\/github.com\/RipaEx\/ripa-node)** built with Swagger UI to make testing a breeze. If you find any issues, come over to **[RipaEx\/ripa-node-test-api](https:\/\/github.com\/RipaEx\/ripa-node-test-api)** to open an issue, or even better, send a PR that fixes the issue.\n\nThe **Community SSL Public API** used as test host is provided from **[ripaex.io](https:\/\/www.ripaex.io\/)**.\n",
+        "termsOfService": ""
+    },
+    "servers": [
+        "httpsapi.ripaex.io\/"
+    ],
+    "paths": {
+        "\/api\/accounts\/getBalance": {
+            "get": {
+                "summary": "Accounts Get Balance",
+                "description": "Get the balance of an account.",
+                "operationId": "AccountsGetBalance",
+                "deprecated": 0,
+                "parameters": [
+                    {
+                        "name": "address",
+                        "in": "query",
+                        "description": "A valid RIPA Address."
+                    }
+                ]
+            }
+        },
+        "\/api\/accounts\/getPublickey": {
+            "get": {
+                "summary": "Accounts Get Publickey",
+                "description": "Get the public key of an account.",
+                "operationId": "AccountsGetPublickey",
+                "deprecated": 0,
+                "parameters": [
+                    {
+                        "name": "address",
+                        "in": "query",
+                        "description": "A valid RIPA Address."
+                    }
+                ]
+            }
+        },
+        "\/api\/accounts\/delegates\/fee": {
+            "get": {
+                "summary": "Accounts Delegates Fee",
+                "description": "Get the delegate fee of an account.",
+                "operationId": "AccountsGetDelegatesFee",
+                "deprecated": 0,
+                "parameters": []
+            }
+        },
+        "\/api\/accounts\/delegates": {
+            "get": {
+                "summary": "Accounts Delegates",
+                "description": "Get the delegates of an account.",
+                "operationId": "AccountsGetDelegates",
+                "deprecated": 0,
+                "parameters": [
+                    {
+                        "name": "address",
+                        "in": "query",
+                        "description": "A valid RIPA Address."
+                    },
+                    {
+                        "name": "orderBy",
+                        "in": "query",
+                        "description": "A string that specifies the column by which to sort the records."
+                    },
+                    {
+                        "name": "limit",
+                        "in": "query",
+                        "description": "An unsigned integer that specifies the maximum number of records."
+                    },
+                    {
+                        "name": "offset",
+                        "in": "query",
+                        "description": "An unsigned integer that specified the number of records to skip."
+                    }
+                ]
+            },
+            "put": {
+                "summary": "Accounts Delegates",
+                "description": "Vote for a delegate by public key.",
+                "operationId": "AccountsAddDelegates",
+                "deprecated": 0,
+                "parameters": [
+                    {
+                        "name": "body",
+                        "in": "body",
+                        "description": ""
+                    }
+                ]
+            }
+        },
+        "\/api\/accounts": {
+            "get": {
+                "summary": "Accounts",
+                "description": "Returns account information of an address.",
+                "operationId": "AccountsGetAccount",
+                "deprecated": 0,
+                "parameters": [
+                    {
+                        "name": "address",
+                        "in": "query",
+                        "description": "A valid RIPA Address."
+                    }
+                ]
+            }
+        },
+        "\/api\/accounts\/getAllAccounts": {
+            "get": {
+                "summary": "Accounts Get All Accounts",
+                "description": "Get a list of accounts.",
+                "operationId": "AccountsGetAllAccounts",
+                "deprecated": 0,
+                "parameters": []
+            }
+        },
+        "\/api\/accounts\/top": {
+            "get": {
+                "summary": "Accounts Top",
+                "description": "Get a list of top accounts.",
+                "operationId": "AccountsTop",
+                "deprecated": 0,
+                "parameters": [
+                    {
+                        "name": "limit",
+                        "in": "query",
+                        "description": "An unsigned integer that specifies the maximum number of records."
+                    },
+                    {
+                        "name": "offset",
+                        "in": "query",
+                        "description": "An unsigned integer that specified the number of records to skip."
+                    }
+                ]
+            }
+        },
+        "\/api\/accounts\/count": {
+            "get": {
+                "summary": "Accounts Count",
+                "description": "Get the count of accounts.",
+                "operationId": "AccountsCount",
+                "deprecated": 0,
+                "parameters": []
+            }
+        },
+        "\/api\/blocks\/get": {
+            "get": {
+                "summary": "Blocks Get",
+                "description": "Get block by id.",
+                "operationId": "BlocksGetBlock",
+                "deprecated": 0,
+                "parameters": [
+                    {
+                        "name": "id",
+                        "in": "query",
+                        "description": ""
+                    }
+                ]
+            }
+        },
+        "\/api\/blocks": {
+            "get": {
+                "summary": "Blocks",
+                "description": "Get all blocks.",
+                "operationId": "BlocksGetBlocks",
+                "deprecated": 0,
+                "parameters": [
+                    {
+                        "name": "limit",
+                        "in": "query",
+                        "description": "An unsigned integer that specifies the maximum number of records."
+                    },
+                    {
+                        "name": "orderBy",
+                        "in": "query",
+                        "description": "A string that specifies the column by which to sort the records."
+                    },
+                    {
+                        "name": "offset",
+                        "in": "query",
+                        "description": "An unsigned integer that specified the number of records to skip."
+                    },
+                    {
+                        "name": "generatorPublicKey",
+                        "in": "query",
+                        "description": "A valid RIPA Public Key."
+                    },
+                    {
+                        "name": "totalAmount",
+                        "in": "query",
+                        "description": ""
+                    },
+                    {
+                        "name": "totalFee",
+                        "in": "query",
+                        "description": ""
+                    },
+                    {
+                        "name": "reward",
+                        "in": "query",
+                        "description": ""
+                    },
+                    {
+                        "name": "previousBlock",
+                        "in": "query",
+                        "description": ""
+                    },
+                    {
+                        "name": "height",
+                        "in": "query",
+                        "description": ""
+                    }
+                ]
+            }
+        },
+        "\/api\/blocks\/getEpoch": {
+            "get": {
+                "summary": "Blocks Get Epoch",
+                "description": "Get the blockchain epoch.",
+                "operationId": "BlocksGetEpoch",
+                "deprecated": 0,
+                "parameters": []
+            }
+        },
+        "\/api\/blocks\/getHeight": {
+            "get": {
+                "summary": "Blocks Get Height",
+                "description": "Get the blockchain height.",
+                "operationId": "BlocksGetHeight",
+                "deprecated": 0,
+                "parameters": []
+            }
+        },
+        "\/api\/blocks\/getNethash": {
+            "get": {
+                "summary": "Blocks Get Nethash",
+                "description": "Get the blockchain nethash.",
+                "operationId": "BlocksGetNethash",
+                "deprecated": 0,
+                "parameters": []
+            }
+        },
+        "\/api\/blocks\/getFee": {
+            "get": {
+                "summary": "Blocks Get Fee",
+                "description": "Get the transaction fee for sending \"normal\" transactions.",
+                "operationId": "BlocksGetFee",
+                "deprecated": 0,
+                "parameters": []
+            }
+        },
+        "\/api\/blocks\/getFees": {
+            "get": {
+                "summary": "Blocks Get Fees",
+                "description": "Get the network fees.",
+                "operationId": "BlocksGetFees",
+                "deprecated": 0,
+                "parameters": []
+            }
+        },
+        "\/api\/blocks\/getMilestone": {
+            "get": {
+                "summary": "Blocks Get Milestone",
+                "description": "Get the blockchain milestone.",
+                "operationId": "BlocksGetMilestone",
+                "deprecated": 0,
+                "parameters": []
+            }
+        },
+        "\/api\/blocks\/getReward": {
+            "get": {
+                "summary": "Blocks Get Reward",
+                "description": "Get the blockchain reward.",
+                "operationId": "BlocksGetReward",
+                "deprecated": 0,
+                "parameters": []
+            }
+        },
+        "\/api\/blocks\/getSupply": {
+            "get": {
+                "summary": "Blocks Get Supply",
+                "description": "Get the blockchain supply.",
+                "operationId": "BlocksGetSupply",
+                "deprecated": 0,
+                "parameters": []
+            }
+        },
+        "\/api\/blocks\/getStatus": {
+            "get": {
+                "summary": "Blocks Get Status",
+                "description": "Get the blockchain status.",
+                "operationId": "BlocksGetStatus",
+                "deprecated": 0,
+                "parameters": []
+            }
+        },
+        "\/api\/delegates\/count": {
+            "get": {
+                "summary": "Delegates Count",
+                "description": "Get the count of delegates.",
+                "operationId": "DelegatesCount",
+                "deprecated": 0,
+                "parameters": [
+                    {
+                        "name": "address",
+                        "in": "query",
+                        "description": "A valid RIPA Address."
+                    }
+                ]
+            }
+        },
+        "\/api\/delegates\/search": {
+            "get": {
+                "summary": "Delegates Search",
+                "description": "Search for specific delegates.",
+                "operationId": "DelegatesSearch",
+                "deprecated": 0,
+                "parameters": [
+                    {
+                        "name": "q",
+                        "in": "query",
+                        "description": "A search query."
+                    },
+                    {
+                        "name": "limit",
+                        "in": "query",
+                        "description": "An unsigned integer that specifies the maximum number of records."
+                    }
+                ]
+            }
+        },
+        "\/api\/delegates\/voters": {
+            "get": {
+                "summary": "Delegates Voters",
+                "description": "Get a list of voters for a delegate.",
+                "operationId": "DelegatesGetVoters",
+                "deprecated": 0,
+                "parameters": [
+                    {
+                        "name": "publicKey",
+                        "in": "query",
+                        "description": "A valid RIPA Public Key."
+                    }
+                ]
+            }
+        },
+        "\/api\/delegates\/get": {
+            "get": {
+                "summary": "Delegates Get",
+                "description": "Get a single delegate.",
+                "operationId": "DelegatesGetDelegate",
+                "deprecated": 0,
+                "parameters": [
+                    {
+                        "name": "publicKey",
+                        "in": "query",
+                        "description": "A valid RIPA Public Key."
+                    },
+                    {
+                        "name": "username",
+                        "in": "query",
+                        "description": "A valid RIPA Delegate username."
+                    }
+                ]
+            }
+        },
+        "\/api\/delegates": {
+            "get": {
+                "summary": "Delegates",
+                "description": "Get all delegates.",
+                "operationId": "DelegatesGetDelegates",
+                "deprecated": 0,
+                "parameters": [
+                    {
+                        "name": "orderBy",
+                        "in": "query",
+                        "description": "A string that specifies the column by which to sort the records."
+                    },
+                    {
+                        "name": "limit",
+                        "in": "query",
+                        "description": "An unsigned integer that specifies the maximum number of records."
+                    },
+                    {
+                        "name": "offset",
+                        "in": "query",
+                        "description": "An unsigned integer that specified the number of records to skip."
+                    }
+                ]
+            },
+            "put": {
+                "summary": "Delegates",
+                "description": "Create a new delegate.",
+                "operationId": "DelegatesAddDelegate",
+                "deprecated": 0,
+                "parameters": [
+                    {
+                        "name": "body",
+                        "in": "body",
+                        "description": ""
+                    }
+                ]
+            }
+        },
+        "\/api\/delegates\/fee": {
+            "get": {
+                "summary": "Delegates Fee",
+                "description": "Get the delegate fee.",
+                "operationId": "DelegatesGetFee",
+                "deprecated": 0,
+                "parameters": [
+                    {
+                        "name": "address",
+                        "in": "query",
+                        "description": "A valid RIPA Address."
+                    }
+                ]
+            }
+        },
+        "\/api\/delegates\/forging\/getForgedByAccount": {
+            "get": {
+                "summary": "Delegates Forging Get Forged By Account",
+                "description": "Get the amount of ripas forged by an account.",
+                "operationId": "DelegatesGetForgedByAccount",
+                "deprecated": 0,
+                "parameters": [
+                    {
+                        "name": "generatorPublicKey",
+                        "in": "query",
+                        "description": "A valid RIPA Public Key."
+                    }
+                ]
+            }
+        },
+        "\/api\/delegates\/getNextForgers": {
+            "get": {
+                "summary": "Delegates Get Next Forgers",
+                "description": "Get the next forger.",
+                "operationId": "DelegatesGetNextForgers",
+                "deprecated": 0,
+                "parameters": [
+                    {
+                        "name": "address",
+                        "in": "query",
+                        "description": "A valid RIPA Address."
+                    }
+                ]
+            }
+        },
+        "\/api\/delegates\/forging\/enable": {
+            "post": {
+                "summary": "Delegates Forging Enable",
+                "description": "Enable forging for a delegate.",
+                "operationId": "DelegatesEnableForging",
+                "deprecated": 0,
+                "parameters": [
+                    {
+                        "name": "secret",
+                        "in": "query",
+                        "description": "A valid RIPA Passphrase."
+                    },
+                    {
+                        "name": "publicKey",
+                        "in": "query",
+                        "description": "A valid RIPA Public Key."
+                    }
+                ]
+            }
+        },
+        "\/api\/delegates\/forging\/disable": {
+            "post": {
+                "summary": "Delegates Forging Disable",
+                "description": "Disable forging for a delegate.",
+                "operationId": "DelegatesDisableForging",
+                "deprecated": 0,
+                "parameters": [
+                    {
+                        "name": "secret",
+                        "in": "query",
+                        "description": "A valid RIPA Passphrase."
+                    },
+                    {
+                        "name": "publicKey",
+                        "in": "query",
+                        "description": "A valid RIPA Public Key."
+                    }
+                ]
+            }
+        },
+        "\/api\/loader\/status": {
+            "get": {
+                "summary": "Loader Status",
+                "description": "Get the blockchain status.",
+                "operationId": "LoaderStatus",
+                "deprecated": 0,
+                "parameters": []
+            }
+        },
+        "\/api\/loader\/status\/sync": {
+            "get": {
+                "summary": "Loader Status Sync",
+                "description": "Get the synchronisation status of the client.",
+                "operationId": "LoaderSync",
+                "deprecated": 0,
+                "parameters": []
+            }
+        },
+        "\/api\/loader\/autoconfigure": {
+            "get": {
+                "summary": "Loader Autoconfigure",
+                "description": "Auto-configure the client loader.",
+                "operationId": "LoaderAutoconfigure",
+                "deprecated": 0,
+                "parameters": []
+            }
+        },
+        "\/api\/multisignatures\/pending": {
+            "get": {
+                "summary": "Multisignatures Pending",
+                "description": "Get pending multi signature transactions.",
+                "operationId": "MultisignaturesPending",
+                "deprecated": 0,
+                "parameters": [
+                    {
+                        "name": "publicKey",
+                        "in": "query",
+                        "description": "A valid RIPA Public Key."
+                    }
+                ]
+            }
+        },
+        "\/api\/multisignatures\/sign": {
+            "post": {
+                "summary": "Multisignatures Sign",
+                "description": "Sign a new multi signature.",
+                "operationId": "MultisignaturesSign",
+                "deprecated": 0,
+                "parameters": [
+                    {
+                        "name": "secret",
+                        "in": "query",
+                        "description": "A valid RIPA Passphrase."
+                    },
+                    {
+                        "name": "secondSecret",
+                        "in": "query",
+                        "description": "A valid secondary RIPA Passphrase."
+                    },
+                    {
+                        "name": "publicKey",
+                        "in": "query",
+                        "description": "A valid RIPA Public Key."
+                    },
+                    {
+                        "name": "transactionId",
+                        "in": "query",
+                        "description": "A valid transaction ID."
+                    }
+                ]
+            }
+        },
+        "\/api\/multisignatures": {
+            "put": {
+                "summary": "Multisignatures",
+                "description": "Create a new multi signature.",
+                "operationId": "MultisignaturesAddMultisignature",
+                "deprecated": 0,
+                "parameters": [
+                    {
+                        "name": "body",
+                        "in": "body",
+                        "description": ""
+                    }
+                ]
+            }
+        },
+        "\/api\/multisignatures\/accounts": {
+            "get": {
+                "summary": "Multisignatures Accounts",
+                "description": "Get a list of accounts.",
+                "operationId": "MultisignatureGetAccounts",
+                "deprecated": 0,
+                "parameters": [
+                    {
+                        "name": "publicKey",
+                        "in": "query",
+                        "description": "A valid RIPA Public Key."
+                    }
+                ]
+            }
+        },
+        "\/api\/peers\/get": {
+            "get": {
+                "summary": "Peers Get",
+                "description": "Get a single peer.",
+                "operationId": "PeersGetPeer",
+                "deprecated": 0,
+                "parameters": [
+                    {
+                        "name": "ip",
+                        "in": "query",
+                        "description": "A valid server IP."
+                    },
+                    {
+                        "name": "port",
+                        "in": "query",
+                        "description": "A valid server Port."
+                    }
+                ]
+            }
+        },
+        "\/api\/peers": {
+            "get": {
+                "summary": "Peers",
+                "description": "Get all peers.",
+                "operationId": "PeersGetPeers",
+                "deprecated": 0,
+                "parameters": [
+                    {
+                        "name": "port",
+                        "in": "query",
+                        "description": "A valid server Port."
+                    },
+                    {
+                        "name": "state",
+                        "in": "query",
+                        "description": "An unsigned integer that specifies the peer state."
+                    },
+                    {
+                        "name": "os",
+                        "in": "query",
+                        "description": "A valid operating system."
+                    },
+                    {
+                        "name": "version",
+                        "in": "query",
+                        "description": "A valid ripa-node version."
+                    },
+                    {
+                        "name": "orderBy",
+                        "in": "query",
+                        "description": "A string that specifies the column by which to sort the records."
+                    },
+                    {
+                        "name": "limit",
+                        "in": "query",
+                        "description": "An unsigned integer that specifies the maximum number of records."
+                    },
+                    {
+                        "name": "offset",
+                        "in": "query",
+                        "description": "An unsigned integer that specified the number of records to skip."
+                    }
+                ]
+            }
+        },
+        "\/api\/peers\/version": {
+            "get": {
+                "summary": "Peers Version",
+                "description": "Get the peer version.",
+                "operationId": "PeersVersion",
+                "deprecated": 0,
+                "parameters": []
+            }
+        },
+        "\/api\/signatures\/fee": {
+            "get": {
+                "summary": "Signatures Fee",
+                "description": "Get the fee for a signature.",
+                "operationId": "SignaturesFee",
+                "deprecated": 0,
+                "parameters": [
+                    {
+                        "name": "address",
+                        "in": "query",
+                        "description": "A valid RIPA Address."
+                    }
+                ]
+            }
+        },
+        "\/api\/signatures": {
+            "put": {
+                "summary": "Signatures",
+                "description": "Create a new signature.",
+                "operationId": "SignaturesAddSignature",
+                "deprecated": 0,
+                "parameters": [
+                    {
+                        "name": "body",
+                        "in": "body",
+                        "description": ""
+                    }
+                ]
+            }
+        },
+        "\/api\/transactions\/get": {
+            "get": {
+                "summary": "Transactions Get",
+                "description": "Get a single transaction.",
+                "operationId": "TransactionsGetTransaction",
+                "deprecated": 0,
+                "parameters": [
+                    {
+                        "name": "id",
+                        "in": "query",
+                        "description": ""
+                    }
+                ]
+            }
+        },
+        "\/api\/transactions": {
+            "get": {
+                "summary": "Transactions",
+                "description": "Get all transactions.",
+                "operationId": "TransactionsGetTransactions",
+                "deprecated": 0,
+                "parameters": [
+                    {
+                        "name": "blockId",
+                        "in": "query",
+                        "description": "An unsigned integer that specifies the block ID."
+                    },
+                    {
+                        "name": "limit",
+                        "in": "query",
+                        "description": "An unsigned integer that specifies the maximum number of records."
+                    },
+                    {
+                        "name": "type",
+                        "in": "query",
+                        "description": "An unsigned integer that specifies the transaction type."
+                    },
+                    {
+                        "name": "orderBy",
+                        "in": "query",
+                        "description": "A string that specifies the column by which to sort the records."
+                    },
+                    {
+                        "name": "offset",
+                        "in": "query",
+                        "description": "An unsigned integer that specified the number of records to skip."
+                    },
+                    {
+                        "name": "senderPublicKey",
+                        "in": "query",
+                        "description": "A valid RIPA Public Key."
+                    },
+                    {
+                        "name": "vendorField",
+                        "in": "query",
+                        "description": "A string that specifies the SmartBridge used."
+                    },
+                    {
+                        "name": "ownerPublicKey",
+                        "in": "query",
+                        "description": "A valid RIPA Address."
+                    },
+                    {
+                        "name": "ownerAddress",
+                        "in": "query",
+                        "description": "A valid RIPA Address."
+                    },
+                    {
+                        "name": "senderId",
+                        "in": "query",
+                        "description": "A valid RIPA Address."
+                    },
+                    {
+                        "name": "recipientId",
+                        "in": "query",
+                        "description": "A valid RIPA Address."
+                    },
+                    {
+                        "name": "amount",
+                        "in": "query",
+                        "description": "An unsigned integer that specifies the transaction amount."
+                    },
+                    {
+                        "name": "fee",
+                        "in": "query",
+                        "description": "An unsigned integer that specifies the transaction fee."
+                    }
+                ]
+            },
+            "put": {
+                "summary": "Transactions",
+                "description": "Create a new transaction.",
+                "operationId": "TransactionsAddTransactions",
+                "deprecated": 0,
+                "parameters": [
+                    {
+                        "name": "body",
+                        "in": "body",
+                        "description": ""
+                    }
+                ]
+            }
+        },
+        "\/api\/transactions\/unconfirmed\/get": {
+            "get": {
+                "summary": "Transactions Unconfirmed Get",
+                "description": "Get a single unconfirmed transaction.",
+                "operationId": "TransactionsGetUnconfirmedTransaction",
+                "deprecated": 0,
+                "parameters": [
+                    {
+                        "name": "id",
+                        "in": "query",
+                        "description": ""
+                    }
+                ]
+            }
+        },
+        "\/api\/transactions\/unconfirmed": {
+            "get": {
+                "summary": "Transactions Unconfirmed",
+                "description": "Get all unconfirmed transactions.",
+                "operationId": "TransactionsGetUnconfirmedTransactions",
+                "deprecated": 0,
+                "parameters": [
+                    {
+                        "name": "senderPublicKey",
+                        "in": "query",
+                        "description": "A valid RIPA Public Key."
+                    },
+                    {
+                        "name": "address",
+                        "in": "query",
+                        "description": "A valid RIPA Address."
+                    }
+                ]
+            }
+        },
+        "\/peer\/list": {
+            "get": {
+                "summary": "Peer List",
+                "description": "Get a list of peers.",
+                "operationId": "TransportListBroadcastPeers",
+                "deprecated": 0,
+                "parameters": []
+            }
+        },
+        "\/peer\/blocks\/common": {
+            "get": {
+                "summary": "Peer Blocks Common",
+                "description": "Get a list of blocks by ids.",
+                "operationId": "TransportCommonBlock",
+                "deprecated": 0,
+                "parameters": [
+                    {
+                        "name": "ids",
+                        "in": "query",
+                        "description": "A list of block IDs."
+                    }
+                ]
+            }
+        },
+        "\/peer\/block": {
+            "get": {
+                "summary": "Peer Block",
+                "description": "Get a single block.",
+                "operationId": "TransportGetBlock",
+                "deprecated": 0,
+                "parameters": [
+                    {
+                        "name": "address",
+                        "in": "query",
+                        "description": "A valid RIPA Address."
+                    }
+                ]
+            }
+        },
+        "\/peer\/blocks": {
+            "get": {
+                "summary": "Peer Blocks",
+                "description": "Get all blocks.",
+                "operationId": "TransportGetBlocks",
+                "deprecated": 0,
+                "parameters": [
+                    {
+                        "name": "address",
+                        "in": "query",
+                        "description": "A valid RIPA Address."
+                    }
+                ]
+            }
+        },
+        "\/peer\/transactions": {
+            "get": {
+                "summary": "Peer Transactions",
+                "description": ".",
+                "operationId": "TransportGetTransactions",
+                "deprecated": 0,
+                "parameters": []
+            },
+            "post": {
+                "summary": "Peer Transactions",
+                "description": "Create a new transaction.",
+                "operationId": "TransportAddTransactions",
+                "deprecated": 0,
+                "parameters": [
+                    {
+                        "name": "transactions",
+                        "in": "body",
+                        "description": "A valid transaction object."
+                    }
+                ]
+            }
+        },
+        "\/peer\/transactionsFromIds": {
+            "get": {
+                "summary": "Peer Transactions From Ids",
+                "description": "Get a list of transactions by ids.",
+                "operationId": "TransportTransactionsFromIds",
+                "deprecated": 0,
+                "parameters": [
+                    {
+                        "name": "ids",
+                        "in": "query",
+                        "description": "A list of block IDs."
+                    }
+                ]
+            }
+        },
+        "\/peer\/height": {
+            "get": {
+                "summary": "Peer Height",
+                "description": "Get the blockchain height.",
+                "operationId": "TransportHeight",
+                "deprecated": 0,
+                "parameters": []
+            }
+        },
+        "\/peer\/status": {
+            "get": {
+                "summary": "Peer Status",
+                "description": "Get the blockchain status.",
+                "operationId": "TransportStatus",
+                "deprecated": 0,
+                "parameters": []
+            }
+        }
+    },
+    "components": {
+        "schemas": {
+            "AccountsAddDelegatesRequest": {
+                "type": "object",
+                "properties": {
+                    "secret": {
+                        "description": "",
+                        "type": "get"
+                    },
+                    "publicKey": {
+                        "description": "",
+                        "type": "get"
+                    },
+                    "secondSecret": {
+                        "description": "",
+                        "type": "get"
+                    }
+                }
+            },
+            "DelegatesAddDelegateRequest": {
+                "type": "object",
+                "properties": {
+                    "secret": {
+                        "description": "",
+                        "type": "get"
+                    },
+                    "publicKey": {
+                        "description": "",
+                        "type": "get"
+                    },
+                    "secondSecret": {
+                        "description": "",
+                        "type": "get"
+                    },
+                    "username": {
+                        "description": "",
+                        "type": "get"
+                    }
+                }
+            },
+            "MultisignaturesAddMultisignatureRequest": {
+                "type": "object",
+                "properties": {
+                    "secret": {
+                        "description": "",
+                        "type": "get"
+                    },
+                    "publicKey": {
+                        "description": "",
+                        "type": "get"
+                    },
+                    "secondSecret": {
+                        "description": "",
+                        "type": "get"
+                    },
+                    "min": {
+                        "description": "",
+                        "type": "get"
+                    },
+                    "lifetime": {
+                        "description": "",
+                        "type": "get"
+                    },
+                    "keysgroup": {
+                        "description": "",
+                        "type": "get"
+                    }
+                }
+            },
+            "SignaturesAddSignatureRequest": {
+                "type": "object",
+                "properties": {
+                    "secret": {
+                        "description": "",
+                        "type": "get"
+                    },
+                    "secondSecret": {
+                        "description": "",
+                        "type": "get"
+                    },
+                    "publicKey": {
+                        "description": "",
+                        "type": "get"
+                    },
+                    "multisigAccountPublicKey": {
+                        "description": "",
+                        "type": "get"
+                    }
+                }
+            },
+            "TransactionsAddTransactionsRequest": {
+                "type": "object",
+                "properties": {
+                    "secret": {
+                        "description": "",
+                        "type": "get"
+                    },
+                    "amount": {
+                        "description": "",
+                        "type": "get"
+                    },
+                    "recipientId": {
+                        "description": "",
+                        "type": "get"
+                    },
+                    "vendorField": {
+                        "description": "",
+                        "type": "get"
+                    },
+                    "publicKey": {
+                        "description": "",
+                        "type": "get"
+                    },
+                    "secondSecret": {
+                        "description": "",
+                        "type": "get"
+                    },
+                    "multisigAccountPublicKey": {
+                        "description": "",
+                        "type": "get"
+                    }
+                }
+            },
+            "TransportAddTransactionsRequest": {
+                "type": "object",
+                "properties": {
+                    "transactions": {
+                        "description": "",
+                        "type": "get"
+                    }
+                }
+            },
+            "AccountsGetBalanceResponse": {
+                "type": "object",
+                "properties": {
+                    "success": {
+                        "description": "",
+                        "type": "get"
+                    },
+                    "balance": {
+                        "description": "",
+                        "type": "get"
+                    },
+                    "unconfirmedBalance": {
+                        "description": "",
+                        "type": "get"
+                    }
+                }
+            },
+            "AccountsGetPublickeyResponse": {
+                "type": "object",
+                "properties": {
+                    "success": {
+                        "description": "",
+                        "type": "get"
+                    },
+                    "publicKey": {
+                        "description": "",
+                        "type": "get"
+                    }
+                }
+            },
+            "AccountsGetDelegatesFeeResponse": {
+                "type": "object",
+                "properties": {
+                    "success": {
+                        "description": "",
+                        "type": "get"
+                    },
+                    "fee": {
+                        "description": "",
+                        "type": "get"
+                    }
+                }
+            },
+            "AccountsGetDelegatesResponse": {
+                "type": "object",
+                "properties": {
+                    "success": {
+                        "description": "",
+                        "type": "get"
+                    },
+                    "delegates": {
+                        "description": "",
+                        "type": "get"
+                    }
+                }
+            },
+            "AccountsAddDelegatesResponse": {
+                "type": "object",
+                "properties": {
+                    "secret": {
+                        "description": "",
+                        "type": "get"
+                    },
+                    "publicKey": {
+                        "description": "",
+                        "type": "get"
+                    },
+                    "secondSecret": {
+                        "description": "",
+                        "type": "get"
+                    }
+                }
+            },
+            "AccountsGetAccountResponse": {
+                "type": "object",
+                "properties": {
+                    "success": {
+                        "description": "",
+                        "type": "get"
+                    },
+                    "account": {
+                        "description": "",
+                        "type": "get"
+                    }
+                }
+            },
+            "AccountsGetAllAccountsResponse": {
+                "type": "object",
+                "properties": {
+                    "success": {
+                        "description": "",
+                        "type": "get"
+                    }
+                }
+            },
+            "AccountsTopResponse": {
+                "type": "object",
+                "properties": {
+                    "success": {
+                        "description": "",
+                        "type": "get"
+                    },
+                    "accounts": {
+                        "description": "",
+                        "type": "get"
+                    }
+                }
+            },
+            "AccountsCountResponse": {
+                "type": "object",
+                "properties": {
+                    "success": {
+                        "description": "",
+                        "type": "get"
+                    },
+                    "block": {
+                        "description": "",
+                        "type": "get"
+                    }
+                }
+            },
+            "BlocksGetBlockResponse": {
+                "type": "object",
+                "properties": {
+                    "success": {
+                        "description": "",
+                        "type": "get"
+                    },
+                    "block": {
+                        "description": "",
+                        "type": "get"
+                    }
+                }
+            },
+            "BlocksGetBlocksResponse": {
+                "type": "object",
+                "properties": {
+                    "success": {
+                        "description": "",
+                        "type": "get"
+                    },
+                    "blocks": {
+                        "description": "",
+                        "type": "get"
+                    }
+                }
+            },
+            "BlocksGetEpochResponse": {
+                "type": "object",
+                "properties": {
+                    "success": {
+                        "description": "",
+                        "type": "get"
+                    },
+                    "epoch": {
+                        "description": "",
+                        "type": "get"
+                    }
+                }
+            },
+            "BlocksGetHeightResponse": {
+                "type": "object",
+                "properties": {
+                    "success": {
+                        "description": "",
+                        "type": "get"
+                    },
+                    "height": {
+                        "description": "",
+                        "type": "get"
+                    },
+                    "id": {
+                        "description": "",
+                        "type": "get"
+                    }
+                }
+            },
+            "BlocksGetNethashResponse": {
+                "type": "object",
+                "properties": {
+                    "success": {
+                        "description": "",
+                        "type": "get"
+                    },
+                    "nethash": {
+                        "description": "",
+                        "type": "get"
+                    }
+                }
+            },
+            "BlocksGetFeeResponse": {
+                "type": "object",
+                "properties": {
+                    "success": {
+                        "description": "",
+                        "type": "get"
+                    },
+                    "fee": {
+                        "description": "",
+                        "type": "get"
+                    }
+                }
+            },
+            "BlocksGetFeesResponse": {
+                "type": "object",
+                "properties": {
+                    "success": {
+                        "description": "",
+                        "type": "get"
+                    },
+                    "send": {
+                        "description": "",
+                        "type": "get"
+                    },
+                    "vote": {
+                        "description": "",
+                        "type": "get"
+                    },
+                    "secondsignature": {
+                        "description": "",
+                        "type": "get"
+                    },
+                    "delegate": {
+                        "description": "",
+                        "type": "get"
+                    },
+                    "multisignature": {
+                        "description": "",
+                        "type": "get"
+                    }
+                }
+            },
+            "BlocksGetMilestoneResponse": {
+                "type": "object",
+                "properties": {
+                    "success": {
+                        "description": "",
+                        "type": "get"
+                    },
+                    "milestone": {
+                        "description": "",
+                        "type": "get"
+                    }
+                }
+            },
+            "BlocksGetRewardResponse": {
+                "type": "object",
+                "properties": {
+                    "success": {
+                        "description": "",
+                        "type": "get"
+                    },
+                    "reward": {
+                        "description": "",
+                        "type": "get"
+                    }
+                }
+            },
+            "BlocksGetSupplyResponse": {
+                "type": "object",
+                "properties": {
+                    "success": {
+                        "description": "",
+                        "type": "get"
+                    },
+                    "supply": {
+                        "description": "",
+                        "type": "get"
+                    }
+                }
+            },
+            "BlocksGetStatusResponse": {
+                "type": "object",
+                "properties": {
+                    "success": {
+                        "description": "",
+                        "type": "get"
+                    },
+                    "epoch": {
+                        "description": "",
+                        "type": "get"
+                    },
+                    "height": {
+                        "description": "",
+                        "type": "get"
+                    },
+                    "fee": {
+                        "description": "",
+                        "type": "get"
+                    },
+                    "milestone": {
+                        "description": "",
+                        "type": "get"
+                    },
+                    "nethash": {
+                        "description": "",
+                        "type": "get"
+                    },
+                    "reward": {
+                        "description": "",
+                        "type": "get"
+                    },
+                    "supply": {
+                        "description": "",
+                        "type": "get"
+                    }
+                }
+            },
+            "DelegatesCountResponse": {
+                "type": "object",
+                "properties": {
+                    "success": {
+                        "description": "",
+                        "type": "get"
+                    },
+                    "count": {
+                        "description": "",
+                        "type": "get"
+                    }
+                }
+            },
+            "DelegatesSearchResponse": {
+                "type": "object",
+                "properties": {
+                    "success": {
+                        "description": "",
+                        "type": "get"
+                    },
+                    "delegates": {
+                        "description": "",
+                        "type": "get"
+                    }
+                }
+            },
+            "DelegatesGetVotersResponse": {
+                "type": "object",
+                "properties": {
+                    "success": {
+                        "description": "",
+                        "type": "get"
+                    },
+                    "accounts": {
+                        "description": "",
+                        "type": "get"
+                    }
+                }
+            },
+            "DelegatesGetDelegateResponse": {
+                "type": "object",
+                "properties": {
+                    "success": {
+                        "description": "",
+                        "type": "get"
+                    },
+                    "delegate": {
+                        "description": "",
+                        "type": "get"
+                    }
+                }
+            },
+            "DelegatesGetDelegatesResponse": {
+                "type": "object",
+                "properties": {
+                    "success": {
+                        "description": "",
+                        "type": "get"
+                    },
+                    "delegates": {
+                        "description": "",
+                        "type": "get"
+                    }
+                }
+            },
+            "DelegatesAddDelegateResponse": {
+                "type": "object",
+                "properties": {
+                    "success": {
+                        "description": "",
+                        "type": "get"
+                    }
+                }
+            },
+            "DelegatesGetFeeResponse": {
+                "type": "object",
+                "properties": {
+                    "success": {
+                        "description": "",
+                        "type": "get"
+                    },
+                    "fee": {
+                        "description": "",
+                        "type": "get"
+                    }
+                }
+            },
+            "DelegatesGetForgedByAccountResponse": {
+                "type": "object",
+                "properties": {
+                    "success": {
+                        "description": "",
+                        "type": "get"
+                    },
+                    "fees": {
+                        "description": "",
+                        "type": "get"
+                    },
+                    "rewards": {
+                        "description": "",
+                        "type": "get"
+                    },
+                    "forged": {
+                        "description": "",
+                        "type": "get"
+                    }
+                }
+            },
+            "DelegatesGetNextForgersResponse": {
+                "type": "object",
+                "properties": {
+                    "success": {
+                        "description": "",
+                        "type": "get"
+                    },
+                    "currentBlock": {
+                        "description": "",
+                        "type": "get"
+                    },
+                    "currentSlot": {
+                        "description": "",
+                        "type": "get"
+                    },
+                    "delegates": {
+                        "description": "",
+                        "type": "get"
+                    }
+                }
+            },
+            "DelegatesEnableForgingResponse": {
+                "type": "object",
+                "properties": {
+                    "success": {
+                        "description": "",
+                        "type": "get"
+                    }
+                }
+            },
+            "DelegatesDisableForgingResponse": {
+                "type": "object",
+                "properties": {
+                    "success": {
+                        "description": "",
+                        "type": "get"
+                    }
+                }
+            },
+            "LoaderStatusResponse": {
+                "type": "object",
+                "properties": {
+                    "success": {
+                        "description": "",
+                        "type": "get"
+                    },
+                    "loaded": {
+                        "description": "",
+                        "type": "get"
+                    },
+                    "now": {
+                        "description": "",
+                        "type": "get"
+                    },
+                    "blocksCount": {
+                        "description": "",
+                        "type": "get"
+                    }
+                }
+            },
+            "LoaderSyncResponse": {
+                "type": "object",
+                "properties": {
+                    "success": {
+                        "description": "",
+                        "type": "get"
+                    },
+                    "syncing": {
+                        "description": "",
+                        "type": "get"
+                    },
+                    "blocks": {
+                        "description": "",
+                        "type": "get"
+                    },
+                    "height": {
+                        "description": "",
+                        "type": "get"
+                    },
+                    "id": {
+                        "description": "",
+                        "type": "get"
+                    }
+                }
+            },
+            "LoaderAutoconfigureResponse": {
+                "type": "object",
+                "properties": {
+                    "success": {
+                        "description": "",
+                        "type": "get"
+                    },
+                    "network": {
+                        "description": "",
+                        "type": "get"
+                    }
+                }
+            },
+            "MultisignaturesPendingResponse": {
+                "type": "object",
+                "properties": {
+                    "success": {
+                        "description": "",
+                        "type": "get"
+                    }
+                }
+            },
+            "MultisignaturesSignResponse": {
+                "type": "object",
+                "properties": {
+                    "success": {
+                        "description": "",
+                        "type": "get"
+                    }
+                }
+            },
+            "MultisignaturesAddMultisignatureResponse": {
+                "type": "object",
+                "properties": {
+                    "success": {
+                        "description": "",
+                        "type": "get"
+                    }
+                }
+            },
+            "MultisignatureGetAccountsResponse": {
+                "type": "object",
+                "properties": {
+                    "success": {
+                        "description": "",
+                        "type": "get"
+                    }
+                }
+            },
+            "PeersGetPeerResponse": {
+                "type": "object",
+                "properties": {
+                    "success": {
+                        "description": "",
+                        "type": "get"
+                    },
+                    "peer": {
+                        "description": "",
+                        "type": "get"
+                    }
+                }
+            },
+            "PeersGetPeersResponse": {
+                "type": "object",
+                "properties": {
+                    "success": {
+                        "description": "",
+                        "type": "get"
+                    },
+                    "peers": {
+                        "description": "",
+                        "type": "get"
+                    }
+                }
+            },
+            "PeersVersionResponse": {
+                "type": "object",
+                "properties": {
+                    "success": {
+                        "description": "",
+                        "type": "get"
+                    },
+                    "version": {
+                        "description": "",
+                        "type": "get"
+                    },
+                    "build": {
+                        "description": "",
+                        "type": "get"
+                    }
+                }
+            },
+            "SignaturesFeeResponse": {
+                "type": "object",
+                "properties": {
+                    "success": {
+                        "description": "",
+                        "type": "get"
+                    },
+                    "fee": {
+                        "description": "",
+                        "type": "get"
+                    }
+                }
+            },
+            "SignaturesAddSignatureResponse": {
+                "type": "object",
+                "properties": {
+                    "success": {
+                        "description": "",
+                        "type": "get"
+                    }
+                }
+            },
+            "TransactionsGetTransactionResponse": {
+                "type": "object",
+                "properties": {
+                    "success": {
+                        "description": "",
+                        "type": "get"
+                    },
+                    "transaction": {
+                        "description": "",
+                        "type": "get"
+                    }
+                }
+            },
+            "TransactionsGetTransactionsResponse": {
+                "type": "object",
+                "properties": {
+                    "success": {
+                        "description": "",
+                        "type": "get"
+                    },
+                    "transactions": {
+                        "description": "",
+                        "type": "get"
+                    }
+                }
+            },
+            "TransactionsAddTransactionsResponse": {
+                "type": "object",
+                "properties": {
+                    "success": {
+                        "description": "",
+                        "type": "get"
+                    }
+                }
+            },
+            "TransactionsGetUnconfirmedTransactionResponse": {
+                "type": "object",
+                "properties": {
+                    "success": {
+                        "description": "",
+                        "type": "get"
+                    }
+                }
+            },
+            "TransactionsGetUnconfirmedTransactionsResponse": {
+                "type": "object",
+                "properties": {
+                    "success": {
+                        "description": "",
+                        "type": "get"
+                    }
+                }
+            },
+            "TransportListBroadcastPeersResponse": {
+                "type": "object",
+                "properties": {
+                    "success": {
+                        "description": "",
+                        "type": "get"
+                    },
+                    "peers": {
+                        "description": "",
+                        "type": "get"
+                    }
+                }
+            },
+            "TransportCommonBlockResponse": {
+                "type": "object",
+                "properties": {
+                    "success": {
+                        "description": "",
+                        "type": "get"
+                    }
+                }
+            },
+            "TransportGetBlockResponse": {
+                "type": "object",
+                "properties": {
+                    "success": {
+                        "description": "",
+                        "type": "get"
+                    }
+                }
+            },
+            "TransportGetBlocksResponse": {
+                "type": "object",
+                "properties": {
+                    "success": {
+                        "description": "",
+                        "type": "get"
+                    }
+                }
+            },
+            "TransportGetTransactionsResponse": {
+                "type": "object",
+                "properties": {
+                    "success": {
+                        "description": "",
+                        "type": "get"
+                    }
+                }
+            },
+            "TransportAddTransactionsResponse": {
+                "type": "object",
+                "properties": {
+                    "success": {
+                        "description": "",
+                        "type": "get"
+                    }
+                }
+            },
+            "TransportTransactionsFromIdsResponse": {
+                "type": "object",
+                "properties": {
+                    "success": {
+                        "description": "",
+                        "type": "get"
+                    }
+                }
+            },
+            "TransportHeightResponse": {
+                "type": "object",
+                "properties": {
+                    "success": {
+                        "description": "",
+                        "type": "get"
+                    },
+                    "height": {
+                        "description": "",
+                        "type": "get"
+                    },
+                    "header": {
+                        "description": "",
+                        "type": "get"
+                    }
+                }
+            },
+            "TransportStatusResponse": {
+                "type": "object",
+                "properties": {
+                    "success": {
+                        "description": "",
+                        "type": "get"
+                    },
+                    "height": {
+                        "description": "",
+                        "type": "get"
+                    },
+                    "forgingAllowed": {
+                        "description": "",
+                        "type": "get"
+                    },
+                    "currentSlot": {
+                        "description": "",
+                        "type": "get"
+                    },
+                    "header": {
+                        "description": "",
+                        "type": "get"
+                    }
+                }
+            },
+            "Account": {
+                "type": "object",
+                "properties": {
+                    "address": {
+                        "description": "",
+                        "type": "get"
+                    },
+                    "unconfirmedBalance": {
+                        "description": "",
+                        "type": "get"
+                    },
+                    "balance": {
+                        "description": "",
+                        "type": "get"
+                    },
+                    "publicKey": {
+                        "description": "",
+                        "type": "get"
+                    },
+                    "unconfirmedSignature": {
+                        "description": "",
+                        "type": "get"
+                    },
+                    "secondsignature": {
+                        "description": "",
+                        "type": "get"
+                    },
+                    "secondPublicKey": {
+                        "description": "",
+                        "type": "get"
+                    },
+                    "multisignatures": {
+                        "description": "",
+                        "type": "get"
+                    },
+                    "u_multisignatures": {
+                        "description": "",
+                        "type": "get"
+                    }
+                }
+            },
+            "TopAccount": {
+                "type": "object",
+                "properties": {
+                    "address": {
+                        "description": "",
+                        "type": "get"
+                    },
+                    "balance": {
+                        "description": "",
+                        "type": "get"
+                    },
+                    "publicKey": {
+                        "description": "",
+                        "type": "get"
+                    }
+                }
+            },
+            "Delegate": {
+                "type": "object",
+                "properties": {
+                    "username": {
+                        "description": "",
+                        "type": "get"
+                    },
+                    "address": {
+                        "description": "",
+                        "type": "get"
+                    },
+                    "publicKey": {
+                        "description": "",
+                        "type": "get"
+                    },
+                    "vote": {
+                        "description": "",
+                        "type": "get"
+                    },
+                    "producedblocks": {
+                        "description": "",
+                        "type": "get"
+                    },
+                    "missedblocks": {
+                        "description": "",
+                        "type": "get"
+                    },
+                    "rate": {
+                        "description": "",
+                        "type": "get"
+                    },
+                    "approval": {
+                        "description": "",
+                        "type": "get"
+                    },
+                    "productivity": {
+                        "description": "",
+                        "type": "get"
+                    }
+                }
+            },
+            "Block": {
+                "type": "object",
+                "properties": {
+                    "id": {
+                        "description": "",
+                        "type": "get"
+                    },
+                    "version": {
+                        "description": "",
+                        "type": "get"
+                    },
+                    "timestamp": {
+                        "description": "",
+                        "type": "get"
+                    },
+                    "height": {
+                        "description": "",
+                        "type": "get"
+                    },
+                    "previousBlock": {
+                        "description": "",
+                        "type": "get"
+                    },
+                    "numberOfTransactions": {
+                        "description": "",
+                        "type": "get"
+                    },
+                    "totalAmount": {
+                        "description": "",
+                        "type": "get"
+                    },
+                    "totalFee": {
+                        "description": "",
+                        "type": "get"
+                    },
+                    "reward": {
+                        "description": "",
+                        "type": "get"
+                    },
+                    "payloadLength": {
+                        "description": "",
+                        "type": "get"
+                    },
+                    "payloadHash": {
+                        "description": "",
+                        "type": "get"
+                    },
+                    "generatorPublicKey": {
+                        "description": "",
+                        "type": "get"
+                    },
+                    "generatorId": {
+                        "description": "",
+                        "type": "get"
+                    },
+                    "blockSignature": {
+                        "description": "",
+                        "type": "get"
+                    },
+                    "confirmations": {
+                        "description": "",
+                        "type": "get"
+                    },
+                    "totalForged": {
+                        "description": "",
+                        "type": "get"
+                    }
+                }
+            },
+            "DelegateSearchResult": {
+                "type": "object",
+                "properties": {
+                    "username": {
+                        "description": "",
+                        "type": "get"
+                    },
+                    "address": {
+                        "description": "",
+                        "type": "get"
+                    },
+                    "publicKey": {
+                        "description": "",
+                        "type": "get"
+                    },
+                    "vote": {
+                        "description": "",
+                        "type": "get"
+                    },
+                    "producedblocks": {
+                        "description": "",
+                        "type": "get"
+                    },
+                    "missedblocks": {
+                        "description": "",
+                        "type": "get"
+                    }
+                }
+            },
+            "Voter": {
+                "type": "object",
+                "properties": {
+                    "username": {
+                        "description": "",
+                        "type": "get"
+                    },
+                    "address": {
+                        "description": "",
+                        "type": "get"
+                    },
+                    "publicKey": {
+                        "description": "",
+                        "type": "get"
+                    },
+                    "balance": {
+                        "description": "",
+                        "type": "get"
+                    }
+                }
+            },
+            "Network": {
+                "type": "object",
+                "properties": {
+                    "nethash": {
+                        "description": "",
+                        "type": "get"
+                    },
+                    "token": {
+                        "description": "",
+                        "type": "get"
+                    },
+                    "symbol": {
+                        "description": "",
+                        "type": "get"
+                    },
+                    "explorer": {
+                        "description": "",
+                        "type": "get"
+                    },
+                    "version": {
+                        "description": "",
+                        "type": "get"
+                    }
+                }
+            },
+            "Peer": {
+                "type": "object",
+                "properties": {
+                    "ip": {
+                        "description": "",
+                        "type": "get"
+                    },
+                    "port": {
+                        "description": "",
+                        "type": "get"
+                    },
+                    "version": {
+                        "description": "",
+                        "type": "get"
+                    },
+                    "errors": {
+                        "description": "",
+                        "type": "get"
+                    },
+                    "os": {
+                        "description": "",
+                        "type": "get"
+                    },
+                    "height": {
+                        "description": "",
+                        "type": "get"
+                    },
+                    "status": {
+                        "description": "",
+                        "type": "get"
+                    },
+                    "delay": {
+                        "description": "",
+                        "type": "get"
+                    }
+                }
+            },
+            "Transaction": {
+                "type": "object",
+                "properties": {
+                    "id": {
+                        "description": "",
+                        "type": "get"
+                    },
+                    "blockid": {
+                        "description": "",
+                        "type": "get"
+                    },
+                    "type": {
+                        "description": "",
+                        "type": "get"
+                    },
+                    "timestamp": {
+                        "description": "",
+                        "type": "get"
+                    },
+                    "amount": {
+                        "description": "",
+                        "type": "get"
+                    },
+                    "fee": {
+                        "description": "",
+                        "type": "get"
+                    },
+                    "senderId": {
+                        "description": "",
+                        "type": "get"
+                    },
+                    "recipientId": {
+                        "description": "",
+                        "type": "get"
+                    },
+                    "senderPublicKey": {
+                        "description": "",
+                        "type": "get"
+                    },
+                    "signature": {
+                        "description": "",
+                        "type": "get"
+                    },
+                    "asset": {
+                        "description": "",
+                        "type": "get"
+                    },
+                    "confirmations": {
+                        "description": "",
+                        "type": "get"
+                    }
+                }
+            },
+            "TransportPeerHeader": {
+                "type": "object",
+                "properties": {
+                    "id": {
+                        "description": "",
+                        "type": "get"
+                    },
+                    "height": {
+                        "description": "",
+                        "type": "get"
+                    },
+                    "version": {
+                        "description": "",
+                        "type": "get"
+                    },
+                    "totalAmount": {
+                        "description": "",
+                        "type": "get"
+                    },
+                    "totalFee": {
+                        "description": "",
+                        "type": "get"
+                    },
+                    "reward": {
+                        "description": "",
+                        "type": "get"
+                    },
+                    "payloadHash": {
+                        "description": "",
+                        "type": "get"
+                    },
+                    "payloadLength": {
+                        "description": "",
+                        "type": "get"
+                    },
+                    "timestamp": {
+                        "description": "",
+                        "type": "get"
+                    },
+                    "numberOfTransactions": {
+                        "description": "",
+                        "type": "get"
+                    },
+                    "previousBlock": {
+                        "description": "",
+                        "type": "get"
+                    },
+                    "generatorPublicKey": {
+                        "description": "",
+                        "type": "get"
+                    },
+                    "blockSignature": {
+                        "description": "",
+                        "type": "get"
+                    }
+                }
+            },
+            "Error": {
+                "type": "object",
+                "properties": {
+                    "success": {
+                        "description": "",
+                        "type": "get"
+                    },
+                    "error": {
+                        "description": "",
+                        "type": "get"
+                    }
+                }
+            }
+        }
+    }
+}
