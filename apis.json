@@ -1,0 +1,69 @@
+{
+    "name": "RipaEx",
+    "description": "<p>Ripa Exchange is an hybrid-decentralized exchange with a strong focus on lowering the entry level for opening new exchanges and giving crypto traders safe and secure trading partners to operate on a daily basis.<\/p>",
+    "image": "http:\/\/kinlane-productions.s3.amazonaws.com\/screen-capture-api\/28880-ripaex-io.jpg",
+    "tags": [
+        "blockchain",
+        "general data",
+        "have api"
+    ],
+    "created": "2019-12-19",
+    "modified": "2019-12-19",
+    "url": "https:\/\/raw.githubusercontent.com\/api-evangelist\/ripaex\/master\/apis.json",
+    "specificationVersion": "0.14",
+    "apis": [
+        {
+            "name": "RIPA Node Documentation",
+            "description": null,
+            "image": "http:\/\/kinlane-productions.s3.amazonaws.com\/screen-capture-api\/28880-ripaex-io.jpg",
+            "humanURL": "http:\/\/www.ripaex.io",
+            "baseURL": "",
+            "tags": [],
+            "properties": [
+                {
+                    "type": "x-openapi",
+                    "url": "https:\/\/raw.githubusercontent.com\/api-evangelist\/1forge\/master\/ripa-node-documentation-openapi.json"
+                },
+                {
+                    "type": "x-openapi",
+                    "url": "http:\/\/kinlane-productions.s3.amazonaws.com\/api-evangelist-site\/company\/openapis\/ripa-node-documentation.json"
+                },
+                {
+                    "type": "x-postman-collecction",
+                    "url": "https:\/\/raw.githubusercontent.com\/api-evangelist\/1forge\/master\/ripa-node-documentation-postman-collection.json"
+                }
+            ]
+        }
+    ],
+    "include": [],
+    "x-common": [
+        {
+            "type": "Documentation",
+            "url": "https:\/\/test.ripaex.io\/"
+        },
+        {
+            "type": "Github",
+            "url": "https:\/\/github.com\/RipaEx"
+        },
+        {
+            "type": "Website",
+            "url": "http:\/\/www.ripaex.io"
+        },
+        {
+            "type": "Email",
+            "url": "info@ripaex.io"
+        },
+        {
+            "type": "Road Map",
+            "url": "https:\/\/ripaex.io\/#roadmap"
+        },
+        {
+            "type": "Twitter",
+            "url": "https:\/\/twitter.com\/ripaex"
+        },
+        {
+            "type": "Website",
+            "url": "https:\/\/ripaex.io"
+        }
+    ]
+}
